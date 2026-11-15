@@ -1,0 +1,93 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Palet hijau minimalis: netral bernuansa hijau (slate) */
+    --color-slate-50: #f7f9f2;
+    --color-slate-100: #ecefe1;
+    --color-slate-200: #dbe1c9;
+    --color-slate-300: #bcc7a3;
+    --color-slate-400: #96a67a;
+    --color-slate-500: #758850;
+    --color-slate-600: #5b6c3d;
+    --color-slate-700: #485531;
+    --color-slate-800: #3a442a;
+    --color-slate-900: #2c3520;
+    --color-slate-950: #121f0d;
+
+    /* Aksen utama: olive/sage */
+    --color-indigo-50: #f3f7ea;
+    --color-indigo-100: #e3ecd0;
+    --color-indigo-200: #c8daa8;
+    --color-indigo-300: #a9c17e;
+    --color-indigo-400: #8ca55c;
+    --color-indigo-500: #758850;
+    --color-indigo-600: #5a6b3c;
+    --color-indigo-700: #475431;
+    --color-indigo-800: #3a442a;
+    --color-indigo-900: #303924;
+    --color-indigo-950: #182010;
+
+    /* Status sukses/tersedia: hijau daun */
+    --color-emerald-50: #eef6e6;
+    --color-emerald-100: #dce7be;
+    --color-emerald-200: #c4d69c;
+    --color-emerald-300: #a7c273;
+    --color-emerald-400: #8bab52;
+    --color-emerald-500: #6f8f3f;
+    --color-emerald-600: #577233;
+    --color-emerald-700: #455a2b;
+    --color-emerald-800: #384926;
+    --color-emerald-900: #303f22;
+    --color-emerald-950: #17230f;
+
+    /* Status informasi: hijau kebiruan */
+    --color-sky-50: #eef7f1;
+    --color-sky-100: #d6ecdd;
+    --color-sky-200: #aed9be;
+    --color-sky-300: #7cc09b;
+    --color-sky-400: #4fa37c;
+    --color-sky-500: #358763;
+    --color-sky-600: #276c50;
+    --color-sky-700: #215741;
+    --color-sky-800: #1d4636;
+    --color-sky-900: #19392d;
+    --color-sky-950: #0c201a;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased;
+    }
+
+    input[type='date'] {
+        color-scheme: light;
+    }
+
+    ::selection {
+        @apply bg-indigo-600 text-white;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff !important;
+    }
+
+    main {
+        padding: 0 !important;
+    }
+}
